@@ -16,4 +16,5 @@ const fearGreedSchema = new Schema({
     fear_greed_score: Number,
 })
 
+// 다른 파일에서 쓸려면 export 해야함.
 export const fearGreedModel = new mongoose.model('fear_greed_score', fearGreedSchema, "fear_greed_score")

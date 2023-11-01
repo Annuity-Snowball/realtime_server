@@ -5,7 +5,6 @@ import http from "http"
 import { redisClient as redis, mongoClient as mongo } from './config/db.config.js'
 import routerConfig from './config/router.config.js'
 import { init } from './config/socket.config.js'
-import mongoose from 'mongoose'
 
 
 dotenv.config()
@@ -28,5 +27,5 @@ app.use(express.urlencoded({extended: true}))
 app.use('/', routerConfig)
 
 server.listen(PORT, () => {
-    console.log(`The Express server is listening at port: ${PORT}`)
+    console.log(`The realTimeServer server is listening at port: ${PORT}`)
 })
