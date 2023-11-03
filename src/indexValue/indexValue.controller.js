@@ -13,6 +13,12 @@ router.get('/', async (req, res, next) => {
     res.send(indexValue )
 })
 
+router.get('/yesterday', async (req, res, next) => {
+    let indexValue = await indexValueRepository.fetch('yesterday_value')    
+    console.log(indexValue)
+    res.send(indexValue)
+})
+
 setTimeout(()=> {
     const io = getIO()
 
